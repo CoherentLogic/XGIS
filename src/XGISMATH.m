@@ -15,6 +15,15 @@ XGISMATH ;CLD/JOLLIS - Spatial Math Support;28 Apr 2013
 ;;   See the License for the specific language governing permissions and
 ;;   limitations under the License.
 
+;; 
+;; tests
+;; 
+ D ASSERT^XGISUTIL($$SQRT^XGISMATH(72.54867),8.517551)
+ D ASSERT^XGISUTIL($$SIN^XGISMATH(72.54867),-.287905)
+ D ASSERT^XGISUTIL($$COS^XGISMATH(72.54867),-0.957659)
+ D ASSERT^XGISUTIL($$TAN^XGISMATH(72.54867),0.300635)
+ Q
+
 FACTORIAL(NUM)   
  N RESULT S RESULT=0
  F I=1:1:NUM D

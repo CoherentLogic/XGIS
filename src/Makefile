@@ -19,12 +19,27 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+CFLAGS=-Wall
+
+all: xgismath.so proj4gtm.so
+
 xgismath.so: xgismath.o
-	gcc -o xgismath.so -g -shared xgismath.o
+	gcc $(CFLAGS) -o xgismath.so -shared xgismath.o
 
 xgismath.o: xgismath.c
-	gcc -c -g -fPIC -I/opt/lsb-gtm xgismath.c
+	gcc $(CFLAGS) -c -fPIC -I/opt/lsb-gtm xgismath.c
+
+proj4gtm.so: proj4gtm.o
+	gcc $(CFLAGS) -o proj4gtm.so -shared proj4gtm.o
+
+proj4gtm.o: proj4gtm.c
+	gcc $(CFLAGS) -c -fPIC -I/opt/lsb-gtm proj4gtm.c
 
 clean:
 	rm xgismath.so
 	rm xgismath.o
+	rm proj4gtm.so
+	rm proj4gtm.o
+
+install:
+	mv xgismath.{so,xc} ${HOME}/lib

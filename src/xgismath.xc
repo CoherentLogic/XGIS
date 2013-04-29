@@ -1,4 +1,4 @@
-/home/jollis/XGIS/src/xgismath.so
+$HOME/lib/xgismath.so
 sin: gtm_status_t m_sin(I:gtm_double_t*, O:gtm_double_t*)
 cos: gtm_status_t m_cos(I:gtm_double_t*, O:gtm_double_t*)
 tan: gtm_status_t m_tan(I:gtm_double_t*, O:gtm_double_t*)
