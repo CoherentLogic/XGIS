@@ -4,15 +4,77 @@ XGISMATH ;CLD/JOLLIS - Spatial Math Support;28 Apr 2013
 FACTORIAL(NUM)
  N RESULT S RESULT=0
  F I=1:1:NUM D
- . S RESULT=RESULT+I
+ . S RESULT=RESULT*I
  Q RESULT
 
-SIN(X)
- Q
+SIN(NUM)
+ N RESULT D &xgismath.sin(NUM,.RESULT)
+ Q RESULT
 
-COS(X)
- Q
+COS(NUM)
+ N RESULT D &xgismath.cos(NUM,.RESULT)
+ Q RESULT
 
-SQRT(X)
- Q
+TAN(NUM)
+ N RESULT D &xgismath.tan(NUM,.RESULT)
+ Q RESULT
 
+ASIN(NUM)
+ N RESULT D &xgismath.asin(NUM,.RESULT)
+ Q RESULT
+
+ACOS(NUM)
+ N RESULT D &xgismath.acos(NUM,.RESULT)
+ Q RESULT
+
+ATAN(NUM)
+ N RESULT D &xgismath.atan(NUM,.RESULT)
+ Q RESULT
+
+ATAN2(NUMY,NUMX)
+ N RESULT D &xgismath.atan2(NUMY,NUMX,.RESULT)
+ Q RESULT
+
+SINH(NUM)
+ N RESULT D &xgismath.sinh(NUM,.RESULT)
+ Q RESULT
+
+COSH(NUM)
+ N RESULT D &xgismath.cosh(NUM,.RESULT)
+ Q RESULT
+
+TANH(NUM)
+ N RESULT D &xgismath.tanh(NUM,.RESULT)
+ Q RESULT
+
+EXP(NUM)
+ N RESULT D &xgismath.exp(NUM,.RESULT)
+ Q RESULT
+
+LOG(NUM)
+ N RESULT D &xgismath.log(NUM,.RESULT)
+ Q RESULT
+
+LOG10(NUM)
+ N RESULT D &xgismath.log10(NUM,.RESULT)
+ Q RESULT
+
+POW(NUMX,NUMY)
+ N RESULT D &xgismath.pow(NUMX,NUMY,.RESULT)
+ Q RESULT
+
+SQRT(NUM)
+ N RESULT D &xgismath.sqrt(NUM,.RESULT)
+ Q RESULT
+
+CEIL(NUM)
+ N RESULT D &xgismath.ceil(NUM,.RESULT)
+ Q RESULT
+
+FLOOR(NUM)
+ N RESULT D &xgismath.floor(NUM,.RESULT)
+ Q RESULT
+
+ABS(NUM)
+ N RESULT D &xgismath.abs(NUM,.RESULT)
+ Q RESULT
