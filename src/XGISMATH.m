@@ -1,0 +1,18 @@
+XGISMATH ;CLD/JOLLIS - Spatial Math Support;28 Apr 2013
+;;1.0;XGIS;**PATCHES**;28 Apr 2013;Build 1
+
+FACTORIAL(NUM)
+ N RESULT S RESULT=0
+ F I=1:1:NUM D
+ . S RESULT=RESULT+I
+ Q RESULT
+
+SIN(X)
+ Q
+
+COS(X)
+ Q
+
+SQRT(X)
+ Q
+
