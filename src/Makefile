@@ -30,7 +30,7 @@ xgismath.o: xgismath.c
 	gcc $(CFLAGS) -c -fPIC -I/opt/lsb-gtm xgismath.c
 
 proj4gtm.so: proj4gtm.o
-	gcc $(CFLAGS) -o proj4gtm.so -shared proj4gtm.o
+	gcc $(CFLAGS) -o proj4gtm.so -shared proj4gtm.o -lproj
 
 proj4gtm.o: proj4gtm.c
 	gcc $(CFLAGS) -c -fPIC -I/opt/lsb-gtm proj4gtm.c
@@ -42,4 +42,7 @@ clean:
 	rm proj4gtm.o
 
 install:
-	mv xgismath.{so,xc} ${HOME}/lib
+	cp xgismath.so $(HOME)/lib
+	cp xgismath.xc $(HOME)/lib
+	cp proj4gtm.so $(HOME)/lib
+	cp proj4gtm.xc $(HOME)/lib

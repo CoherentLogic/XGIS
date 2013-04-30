@@ -17,7 +17,7 @@
 #define RADIANS 0
 #define DEGREES 1
 
-int m_transform(int count, char *srcdefn, char *destdefn, long *src_units, double *x_in, double *y_in, double *x_out, double *y_out)
+int m_transform(int count, char *srcdefn, char *destdefn, double *x_in, double *y_in, double *x_out, double *y_out)
 {
   double x, y;
   projPJ pj_source, pj_dest;
@@ -32,22 +32,11 @@ int m_transform(int count, char *srcdefn, char *destdefn, long *src_units, doubl
 
   x = *x_in;
   y = *y_in;
-
-  switch(*src_units) {
-  case RADIANS:
-    break;
-  case DEGREES:
-    x *= DEG_TO_RAD;
-    y *= DEG_TO_RAD;
-    break;
-  default:
-    return(1);
-  }
   
   transform_result = pj_transform(pj_source, pj_dest, 1, 1, &x, &y, NULL);
  
   *x_out = x;
   *y_out = y;
   
-  return(0);
+  return(transform_result ? 1 : 0);
 }
