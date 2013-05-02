@@ -12,6 +12,7 @@ GEOJSON(FDA)
  F I=0:0 S DDNUM=$O(FDA(DDNUM)) Q:DDNUM=""  D
  . I DDNUM=5.7 D				;layer properties
  . . S OARRAY("features",1)=""
+ . . S OARRAY("features",1,"type")="Feature"
  . . S OARRAY("features",1,"properties")=""
  . . S OARRAY("features",1,"properties","feature_id")=FDA(DDNUM,"1,","NAME")
  . . S OARRAY("features",1,"properties","layer_id")=FDA(DDNUM,"1,","LAYER")
