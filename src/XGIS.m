@@ -37,7 +37,8 @@ INIT()
  S ^XGISUTL("CONSTANTS","RA6")=67/3024
  S ^XGISUTL("CONSTANTS","RV4")=5/72
  S ^XGISUTL("CONSTANTS","RV6")=55/1296 
- S ^XGISUTL("SERVER","ERRORS",404)="<html><head><title>Error</title></head><body><h1>Invalid API</h1><p><em>VISTA SPATIAL EXTENSIONS GEOJSON SERVER 1.0</em></p></body></html>"
+ S ^XGISUTL("SERVER","ERRORS",404,"BODY")="<html><head><title>Error</title></head><body><h1>Invalid API</h1><p><em>VISTA SPATIAL EXTENSIONS GEOJSON SERVER 1.0</em></p></body></html>"
+ S ^XGISUTL("SERVER","ERRORS",404,"MESSAGE")="Not Found"
  Q
 
 CONST(KEY)
